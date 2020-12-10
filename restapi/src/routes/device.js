@@ -3,12 +3,11 @@ const router = require('express-promise-router')();
 const {
     index,
     newDevice,
-    getDevice
+    mayor
 } = require('../controllers/device');
 
 router.get('/', index);
 router.post('/', newDevice);
-
-router.get('/:deviceId', getDevice);
+router.get('/mayor', mayor);
 
 module.exports  = router;
